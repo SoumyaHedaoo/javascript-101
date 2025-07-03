@@ -40,3 +40,16 @@ Boolean :
     .
 
 */
+
+
+
+
+
+
+//== and comparison works in different ways < ,> ,>= , <= convert arguments to number then check
+
+
+
+console.log(null == 0);
+console.log(null >= 0);
+console.log(null > 0);
