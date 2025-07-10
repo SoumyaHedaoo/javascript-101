@@ -1,19 +1,7 @@
 const strr= "string -primitive-storedinSTACK";
-const newStr = "stringObject-referenceinStack-stroredinHEAP"//rarely used
-
-
-
-
-
-
+const newStr =new String ( "stringObject-referenceinStack-stroredinHEAP")//rarely used
 
 console.log(newStr.split('-'));
-
-
-
-
-
-
 
 /*
 const str = "abs";
@@ -38,8 +26,6 @@ console.log(a === b); // false — different objects, even if content is same
 /*
 
 
-
-
 | Feature                    | `const str = "abs"`        | `const newstr = new String("abs")` |
 | -------------------------- | -------------------------- | ---------------------------------- |
 | **Type**                   | `string` (primitive)       | `object` (String object wrapper)   |
@@ -47,15 +33,7 @@ console.log(a === b); // false — different objects, even if content is same
 | **Mutability**             | Immutable                  | Mutable (as an object)             |
 | **Used for**               | Normal string manipulation | Rarely used, mostly for edge cases |
 | **Typeof result**          | `typeof str → "string"`    | `typeof newstr → "object"`         |
-| **Equality Check (`===`)** | Compares value             | Compares reference, not just value |
-
-
-
-
-
-*/
-
-/* 
+| **Equality Check (`===`)** | Compares value             | Compares reference, not just value 
 
 
 | Aspect         | `"abc"`                | `new String("abc")`              |
@@ -69,3 +47,25 @@ console.log(a === b); // false — different objects, even if content is same
 
 */
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//MATHS 
+
+
+
+console.log(Math.random());
+
+//find random number between two values :
+
+let min=10;
+let max=20;
+
+console.log(Math.floor(Math.random()*(max-min+1)+min));
+
+/*
+Because you're defining the size of the range (the interval width).
+You're saying: "Give me a number this far from min."
+*/
