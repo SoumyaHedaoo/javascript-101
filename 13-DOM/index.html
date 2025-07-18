@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-101</title>
+  </head>
+  <body style="background-color: rgb(48, 48, 49); color: aliceblue">
+    <div class="container">
+      <h1 class="title" id="heading" >Weekdays</h1>
+      <ul class="weekList" id="Week">
+        <li class="day">Monday</li>
+        <li class="day">Tuesday</li>
+        <li class="day">Thursday</li>
+        <li class="day">Friday</li>
+      </ul>
+    </div>
+
+    <div class="conatiner-2">
+        <ul class="languages"><h1>Languages</h1>
+            <li>Javascript</li>
+        </ul>
+    </div>
+  </body>
+
+
+
+
+  <script>
+
+    //select element from document
+    const weekData = document.querySelector('.weekList')
+   // console.log(weekData);
+    
+   //log elements(parent) childrens 
+    for(let i=0 ; i<weekData.children.length ; i++){
+            //console.log(weekData.children[i].innerText);
+            
+    }
+
+    weekData.children[1].style.color = " LightGreen";
+
+    //NodeList
+   // console.log(weekData.childNodes);
+
+
+    //create new Element
+
+    const div = document.createElement("div");
+    div.className = "newClass";
+    div.id = "new-Id";
+    div.setAttribute("title" , "This DIV is created through js")
+    div.style.backgroundColor="navy";
+    div.style.padding="15px";
+
+    const text = document.createTextNode("Hellow!! from down here . I am JS");
+    div.appendChild(text);
+
+    document.body.appendChild(div);
+
+    console.log(div);
+    
+
+
+    //function to add new li to languages list
+
+    const addNewLanguage = (text) => {
+            const parent = document.querySelector(".languages");
+
+            const ele = document.createElement('li');
+            ele.setAttribute("className" , `${text}`);
+            //ele.innerText = text; -> not optimised approach
+
+            ele.appendChild(document.createTextNode(text));
+
+            parent.appendChild(ele);
+    }
+    addNewLanguage("python");
+
+    //remove a element 
+
+    const toRem = document.querySelector(".languages").lastElementChild;
+    toRem.remove();
+
+
+    
+
+  </script>
+</html>
