@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeouts and Intervals</title>
+</head>
+<body style="background-color: #3f3e3e; color: #f0e6e6;">
+    <h1>hii I might change in a bit</h1>
+
+    <button id="stop">STOP ME</button>
+</body>
+<script>
+
+    const changeText =()=>{
+        const ele = document.querySelector("h1");
+        ele.innerText = "see told ya , Its changed"
+    }
+
+    const change=setTimeout(changeText, 3000);
+
+    const button= document.getElementById("stop");
+
+    button.addEventListener("click" , ()=>{
+        clearTimeout(change);
+        clearInterval(interval);
+        console.log("succcess");
+        
+    })
+
+    const interval=setInterval(() => {
+        console.log(Math.floor(Math.random()*10)+1);
+        
+    }, 1000);
+
+
+
+
+
+
+</script>
+</html>
